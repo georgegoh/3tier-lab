@@ -13,7 +13,5 @@
     template:
       src: haproxy.cfg.j2
       dest: /etc/haproxy/haproxy.cfg
-  - name: restart haproxy
-    service:
-      name: haproxy
-      state: restarted
+    notify:
+      - restart haproxy
