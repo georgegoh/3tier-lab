@@ -1,6 +1,6 @@
 ---
 - name: set up yum repo
-  hosts: all
+  hosts: frontends apps appdbs
   become: yes
   tasks:
   - template:
